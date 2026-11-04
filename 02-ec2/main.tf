@@ -15,7 +15,7 @@ resource "aws_instance" "main" {
 # Terraform understands the dependency and creates the instance first.
 resource "aws_route53_record" "main" {
   zone_id = "Z02185673PPMYAJHNLFI1"
-  name    = "test"
+  name    = "tf-test"
   type    = "A"
   ttl     = 30
   records = [aws_instance.main.private_ip]
